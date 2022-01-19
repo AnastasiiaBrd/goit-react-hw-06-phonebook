@@ -27,7 +27,7 @@ class App extends Component {
     this.findName(data.name)
       ? alert(`${data.name} is already in contacts`)
       : this.setState((prevState) => {
-          return { ...prevState.contacts };
+          return { contacts: [...prevState.contacts, data] };
         });
   };
   filterContact = () => {
