@@ -3,10 +3,10 @@ import propTypes from "prop-types";
 import ItemListContact from "../ItemListContact/ItemListContact";
 import { number } from "prop-types";
 
-const ContactList = ({ contacts, onDeleteContact }) => {
+const ContactList = ({ filterContacts, onDeleteContact }) => {
   return (
     <ul className="list_item">
-      {contacts.map(({ id, name, number }) => (
+      {filterContacts.map(({ id, name, number }) => (
         <ItemListContact
           key={id}
           id={id}
